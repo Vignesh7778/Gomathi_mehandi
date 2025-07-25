@@ -1,0 +1,261 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap');
+
+/* ---- CSS Variables for Theme ---- */
+:root {
+    --primary-color: #800000; /* Maroon */
+    --secondary-color: #f3e5ab; /* Cream */
+    --gold-color: #FFD700; /* Gold */
+    --dark-color: #3b2f2f; /* Dark Brown */
+    --body-font: 'Montserrat', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    background-color: #FFFAF0; /* Floral White - a soft cream background */
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6, .section-title, .navbar-brand, .hero-title {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* ---- Navbar ---- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* ---- Hero Banner ---- */
+.hero-banner {
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img (19).webp') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-title {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #660000; /* Darker Maroon */
+    border-color: #660000;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--gold-color);
+    border-color: var(--gold-color);
+    color: var(--dark-color);
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e6c300;
+    border-color: #e6c300;
+    transform: translateY(-2px);
+}
+
+
+/* ---- Service Cards ---- */
+.service-card {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* ---- Testimonial Snippet ---- */
+.testimonial-snippet {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 40px;
+}
+.blockquote-footer {
+    color: var(--primary-color);
+}
+
+/* ---- Services Page ---- */
+.price-tag {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* ---- Footer ---- */
+.footer-bg {
+    background-color: var(--dark-color);
+}
+
+.footer-bg a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-bg a:hover {
+    color: var(--gold-color) !important;
+}
+
+/* ---- Testimonials Page Specific Styles ---- */
+.testimonial-card {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.text-gold {
+    color: var(--gold-color);
+}
+
+.testimonial-card img.rounded-circle {
+    border: 3px solid var(--gold-color);
+}
+
+/* ===================================
+   Contact Page Enhancements
+====================================== */
+
+/* Main wrapper for the contact form and info */
+.contact-wrapper {
+    border-radius: 15px;
+    overflow: hidden; /* Important for keeping child border-radius */
+    background-color: #fff;
+    margin-top: 2rem;
+}
+
+/* Styling for the form input fields */
+.contact-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.contact-form .form-control:focus {
+    background-color: #fff;
+    border-color: var(--gold-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 165, 87, 0.25); /* Using your gold color */
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Custom button style to match the theme */
+.contact-form .btn-primary {
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+/* Right-side panel with contact details */
+.contact-info-panel {
+    background-color: #333; /* Dark background for contrast */
+    color: #f8f9fa;
+}
+
+.contact-info-panel h3,
+.contact-info-panel h4 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-info-panel a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-panel a:hover {
+    color: var(--gold-color);
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.contact-info li i {
+    color: var(--gold-color);
+    font-size: 1.2rem;
+    margin-top: 4px; /* Align icon better with text */
+}
+
+/* Payment Icons */
+.payment-icons img {
+    height: 35px;
+    margin-right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.payment-icons img:hover {
+    opacity: 1;
+}
+
+/* Google Map Container */
+.map-container iframe {
+    border-radius: 10px;
+    border: 0;
+}
+
+.btn-brown {
+    background-color: #8B4513; /* SaddleBrown */
+    color: white;
+    border: none;
+}
+
+.btn-brown:hover {
+    background-color: #5C3317; /* Darker shade on hover */
+    color: white;
+}
