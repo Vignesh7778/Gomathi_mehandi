@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Gomathi Mehendi Creations</title>
+    <title>Gallery - Gomathi Mehendi Creation</title>
     <meta name="description"
         content="Explore our gallery of intricate bridal mehndi, vibrant festival henna, and custom designs by Elegant Mehndi Creations.">
     <link rel="icon" type="image/jpeg" href="icon.jpeg">
@@ -21,236 +21,6 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <style>
-        /* --- 1. Global & Theme Styles --- */
-        :root {
-            --primary-color: #8B4513;
-            /* A rich, elegant brown like henna */
-            --gold-color: #D4AF37;
-            /* A classic, warm gold */
-            --light-bg: #fffaf5;
-            /* A very light, warm off-white */
-            --dark-text: #333333;
-            --body-font: 'Montserrat', sans-serif;
-            --heading-font: 'Playfair Display', serif;
-        }
-
-        body {
-            font-family: var(--body-font);
-            color: var(--dark-text);
-            background-color: #FFFFFF;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .navbar-brand,
-        .section-title {
-            font-family: var(--heading-font);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--gold-color);
-            margin: 1rem auto 0;
-        }
-
-        /* --- 2. Navbar & Footer Styles (assuming from style.css) --- */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .footer-bg {
-            background-color: #2c1d10;
-        }
-
-        /* --- 3. Gallery & Filtering Styles --- */
-        .gallery-wrapper {
-            background-color: var(--light-bg);
-            border-radius: 1rem;
-            padding: 4rem 0;
-        }
-
-        #filter-buttons .btn {
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border-radius: 50px;
-            /* Pill-shaped buttons */
-            padding: 0.6rem 1.5rem;
-            border-width: 2px;
-            margin: 0.25rem;
-        }
-
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-outline-primary:hover,
-        #filter-buttons .btn.active {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            color: white;
-            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Gallery Item & Animation */
-        .gallery-item {
-            /* Initial state for animation */
-            opacity: 1;
-            transform: scale(1);
-            transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-            backface-visibility: hidden;
-            /* Helps rendering performance */
-        }
-
-        /* State for a hidden item during filtering */
-        .gallery-item.hide {
-            opacity: 0;
-            transform: scale(0.8);
-            pointer-events: none;
-            /* Disable interaction while hidden */
-        }
-
-        .gallery-item .img-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            cursor: pointer;
-        }
-
-        .gallery-item:hover .img-container {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-        }
-
-        .gallery-item img {
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Overlay effect */
-        .img-container .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(to top, rgba(43, 29, 14, 0.7), rgba(43, 29, 14, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2.5rem;
-            pointer-events: none;
-            /* Let clicks pass through to the <a> tag */
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        .overlay .icon {
-            transform: scale(0);
-            transition: transform 0.4s ease 0.1s;
-            /* Slight delay */
-            text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-        }
-
-        .gallery-item:hover .overlay .icon {
-            transform: scale(1);
-        }
-
-        /* --- 4. Call-to-Action (CTA) Section --- */
-        .cta-section {
-            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.8)), url('img (14).webp') no-repeat center center;
-            background-size: cover;
-            background-attachment: fixed;
-            /* Parallax-like effect */
-            padding: 5rem 1.5rem;
-            border-radius: 1rem;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(2rem, 5vw, 2.8rem);
-            /* Responsive font size */
-            font-weight: 700;
-        }
-
-        .cta-section .lead {
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .btn-cta {
-            background-color: var(--gold-color);
-            border: 2px solid var(--gold-color);
-            color: var(--dark-text);
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-cta:hover {
-            background-color: transparent;
-            color: white;
-            border-color: var(--gold-color);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* --- 5. Product Section Styles --- */
-        .product-card {
-            border: 1px solid #eee;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card .card-title {
-            font-family: var(--heading-font);
-            color: var(--primary-color);
-        }
-
-        .product-card .card-body {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -492,7 +262,7 @@
                     <h6 class="text-uppercase fw-bold">Contact</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--gold-color); height: 2px"/>
                     <p><i class="fas fa-home me-3"></i> Cuddalore, Tamil Nadu, India</p>
-                    <p><i class="fas fa-envelope me-3"></i> info@elegantmehndi.com</p>
+                    <p><i class="fas fa-envelope me-3"></i> cuddaloremehendistore@gmail.com</p>
                     <p><i class="fas fa-phone me-3"></i> +91 77088 53014</p>
                     <p><i class="fab fa-whatsapp me-3"></i> +91 73088 53014</p>
                 </div>
@@ -500,7 +270,7 @@
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2025 Copyright:
-            <a class="text-white" href="index.html">ElegantMehndiCreations.com</a>
+            <a class="text-white" href="index.html">GomathiMehndiCreations.com</a>
         </div>
     </footer>
 
