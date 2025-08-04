@@ -56,6 +56,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .navbar-brand, .hero-title {
 .hero-title {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 5rem;
 }
 
 /* ---- Buttons ---- */
@@ -155,7 +156,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .navbar-brand, .hero-title {
 }
 
 /* ===================================
-   Contact Page Enhancements
+    Contact Page Enhancements
 ====================================== */
 
 /* Main wrapper for the contact form and info */
@@ -258,4 +259,55 @@ h1, h2, h3, h4, h5, h6, .section-title, .navbar-brand, .hero-title {
 .btn-brown:hover {
     background-color: #5C3317; /* Darker shade on hover */
     color: white;
+}
+
+/* ===================================
+   Responsive Mobile Styles
+====================================== */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .hero-banner {
+        min-height: 60vh;
+        background-attachment: scroll; /* Disable fixed background on mobile for better performance */
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Reduced font size for mobile */
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card img {
+        height: 180px;
+    }
+
+    .testimonial-snippet {
+        padding: 20px;
+    }
+
+    .footer-bg .col-md-3,
+    .footer-bg .col-md-2,
+    .footer-bg .col-md-4 {
+        margin-bottom: 2rem; /* Add spacing between stacked columns */
+        text-align: center;
+    }
+    
+    .footer-bg hr {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }

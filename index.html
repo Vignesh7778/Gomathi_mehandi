@@ -3,6 +3,7 @@
 <head>
     <title>Gomathi Mehndi Creations - Home</title>
     <meta name="description" content="Elegant Mehndi Creations offers stunning bridal, festival, and custom henna art. Bringing tradition to life through beautiful mehndi designs.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="icon.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -43,10 +44,10 @@
 
         <section class="container py-5 my-5">
             <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                <div class="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right">
                     <img src="profile.jpg" alt="Mehndi hands" class="img-fluid rounded-3 shadow-lg">
                 </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="col-12 col-md-6" data-aos="fade-left" data-aos-delay="200">
                     <h2 class="section-title">About Our Artistry</h2>
                     <p class="lead">With over 5+ years of experience, we bring passion and precision to every henna design.</p>
                     <p>Elegant Mehndi Creations is dedicated to providing exquisite, natural henna art for all occasions. From intricate bridal designs to festive patterns and custom requests, our goal is to make your celebration even more special with beautiful, long-lasting mehndi.</p>
@@ -59,7 +60,7 @@
             <div class="container">
                 <h2 class="section-title text-center mb-5" data-aos="fade-up">Our Popular Services</h2>
                 <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up">
+                    <div class="col-12 col-md-4" data-aos="fade-up">
                         <div class="card service-card h-100 text-center p-3">
                             <img src="img (9).webp" class="card-img-top mx-auto mt-3 rounded" alt="Bridal Mehndi">
                             <div class="card-body">
@@ -68,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150">
                         <div class="card service-card h-100 text-center p-3">
                             <img src="img (13).webp" class="card-img-top mx-auto mt-3 rounded" alt="Festival Mehndi">
                             <div class="card-body">
@@ -77,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card service-card h-100 text-center p-3">
                             <img src="img (15).webp" class="card-img-top mx-auto mt-3 rounded" alt="Custom Mehndi">
                             <div class="card-body">
@@ -123,13 +124,13 @@
     <footer class="footer-bg text-white pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold">Elegant Mehndi Creations</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--gold-color); height: 2px"/>
                     <p>Your premier destination for exquisite and natural mehndi designs. We turn your moments into masterpieces.</p>
                 </div>
 
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold">Services</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--gold-color); height: 2px"/>
                     <p><a href="services.html" class="text-white">Bridal Mehndi</a></p>
@@ -138,7 +139,7 @@
                     <p><a href="services.html" class="text-white">Henna Products</a></p>
                 </div>
 
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-12 col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold">Useful links</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--gold-color); height: 2px"/>
                     <p><a href="about.html" class="text-white">About Us</a></p>
@@ -147,7 +148,7 @@
                     <p><a href="contact.html" class="text-white">Book Now</a></p>
                 </div>
 
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <div class="col-12 col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <h6 class="text-uppercase fw-bold">Contact</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: var(--gold-color); height: 2px"/>
                     <p><i class="fas fa-home me-3"></i> Cuddalore, Tamil Nadu, India</p>
@@ -165,6 +166,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // Make sure AOS is initialized after the DOM content is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        });
+    </script>
 </body>
 </html>
